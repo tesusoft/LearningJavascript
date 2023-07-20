@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.every()</h2>
+<p>The every() method checks if all array values pass a test.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+//let str = "condition not met";
+allOver18 == true ? document.getElementById("demo").innerHTML = "All over 18 is meet." : document.getElementById("demo").innerHTML = "All over 18 condition not meet." ;
+
+// {
+//     let str = "condition met"
+//     //document.getElementById("demo1").innerHTML = str;
+//     document.getElementById("demo").innerHTML = "All over 18 is " + str;
+// }
+
+
+//console.log(allOver18.value);
+
+
+
+function myFunction(value, index, array) {
+  return value > 18;
+  
+}
+</script>
+
+</body>
+</html>

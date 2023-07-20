@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Get Date Methods</title>
+    <style>
+        p{
+            background-color: rgb(216, 119, 119);
+            margin: 2px;
+            padding: 10px;
+            width: 600px;
+            border: 2px solid #000;
+            text-align: left;
+            color: white;
+        }
+        p:hover{
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+<p>Create a new date object with the current date and time:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo8"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo9"></p>
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = "Date: " + d;
+
+document.getElementById("demo1").innerHTML = "Year: " + d.getFullYear();
+//Lets fetch days of a date as number (1 - 31)
+document.getElementById("demo2").innerHTML = "Day: " + d.getDate();
+
+//Loading months in full names
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let month = months[d.getMonth()];
+document.getElementById("demo3").innerHTML = "Month: " + month;
+
+//Load day of the week, returns the weekday of a date as a number (0-6)
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursay", "Friday", "Saturday"];
+let day = days[d.getDay()];
+document.getElementById("demo8").innerHTML = day;
+
+let hour = d.getHours()
+document.getElementById("demo4").innerHTML = "Time Hour: " + hour;
+
+let mins = d.getMinutes();
+document.getElementById("demo5").innerHTML = "Time Mins: " + mins;
+
+let sec = d.getSeconds();
+document.getElementById("demo6").innerHTML = "Time Secs: " + sec;
+
+let milli = d.getMilliseconds();
+document.getElementById("demo7").innerHTML = "Time Milliseconds: " + milli;
+
+let time = d.getTime();
+document.getElementById("demo9").innerHTML = "Time Full time " + time;
+</script>
+</body>
+</html>
