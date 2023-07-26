@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Boleans</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        background-color: #a4AA6d;
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+    }
+    hr{
+        padding: 3px 3px 3px 30px;
+        margin: 10px 0px 20px -20px;
+        background-color: #a4d;
+        border-radius: 3px;
+        position: relative;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+    <h1>JavaScript Booleans</h1>
+    <h2>Boolean Values</h2>
+    <p>A JavaScript Boolean represent one of two values: true or false</p>
+    <p id="demo"></p>
+<script>
+    let x = 0;
+    let x1 = -1;
+    let y = null;
+    let y1 = false;
+    let z = 10/ "Hello";
+ document.getElementById("demo").innerHTML = "is 10 > 9? " + Boolean(10 > 9) + "<br>" +
+ "is 10 > 9? " + (10 > 9) +"<br><hr>" +
+ "100 is " + Boolean(100) + "<br>" +
+"3.14 is " + Boolean(3.14) + "<br>" +
+"-15 is " + Boolean(-15) + "<br>" +
+"Any (not empty) string is " + Boolean("Hello") + "<br>" +
+"Even the string 'false' is " + Boolean('false') + "<br>" +
+"Any expression (except zero) is " + Boolean(1 + 7 + 3.14) + "<br>" +
+"x = 0, is false because it is: " + x +"<br>" +
+"x1 = -1 is false because it is minus(-): " + x1 +"<br>" +
+"y = null, is false because it is: " + y +"<br>" + 
+"y1 = false, is false because it is: " + y1 +"<br>" +
+"z = 10/ Hello, is false because it is: " + z +"<br>";
+</script>
+</body>
+</html>

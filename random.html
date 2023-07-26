@@ -6,13 +6,21 @@
 <style>
     h1{
         text-align: center;
+        color: #a4d;
     }
     h2{
         text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
     }
     p{
-        background-color: rgb(168, 152, 233);
+        background-color: #a4AA6d;
         width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
     }
 </style>
 </head>
@@ -21,11 +29,46 @@
     <h2>Math.random()</h2>
 <p>Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)</p>
 <p id="demo"></p>
-<p>Math.random() always returns a number lower than 1</p>
+<p>Math.random() always returns a number lower than 1. You have to do some manipulation to <br> get a random integer.</p>
+<br>
+<h3>JavaScript Math.random (min, max).</h3>
+<p class="rndIntMinMax">Every time you click the button, <br>getRndInterger(min,max) returns a random number between 0 and 9 (both included):</p>
+<button onclick="document.getElementById('demo1').
+innerHTML = getRndInteger(0,10)">Click Me</button>
+<p id="demo1"></p>
+<p>This JavaScript function above always returns a random number between min (included) <br> and max (excluded):</p>
+<hr />
+<button onclick="document.getElementById('demo2').
+innerHTML = getRndInteger1(0,10)">Click Me</button>
+<p id="demo2"></p>
+<p>This JavaScript function above always returns a random number between min <br> and max (both included):</p>
 <script>
+    let x = Math.random();
 document.getElementById("demo").innerHTML =
-"<p><i>Math.random(): </i>" + Math.random() + "</p>"; 
-</script>
+"<p><i>Math.random(): </i>" + x + "</p>" +
+// returns an interger value { o or 1}
+"<p><i>Math.floor(Math.random()): </i>" + Math.floor(x) + " - returns an interger value { o or 1}.</p>" +
+// returns an interger from 0 to 9
+"<p><i>Math.floor(Math.random() * 10): </i>" + Math.floor(x * 10) + " - returns an interger from 0 to 9.</p>" +
+// returns an integer from 0 to 10
+"<p><i>Math.floor(Math.random() * 11): </i>" + Math.floor(x * 11) + " - returns an integer from 0 to 10.</p>" +
+// returns an integer from 0 to 99
+"<p><i>Math.floor(Math.random() * 100): </i>" + Math.floor(x * 100) + " - returns an integer from 0 to 99.</p>" +
+// returns an integer from 0 to 100
+"<p><i>Math.floor(Math.random() * 101): </i>" + Math.floor(x * 101) + " - returns an integer from 0 to 100.</p>" +
+// returns an integer from 1 to 10
+"<p><i>Math.floor(Math.random() * 10 + 1): </i>" + Math.floor((x * 10) + 1) + " - returns an integer from 1 to 10.</p>" +
+// returns an integer from 1 to 100
+"<p><i>Math.floor(Math.random() * 100 + 1): </i>" + Math.floor((x * 100) + 1) + " - returns an integer from 1 to 100.</p>"; 
+function getRndInteger(min, max){
+    //alert("Hello");
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+function getRndInteger1(min, max){
+    //alert("Hello");
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+   //return max - min;
+}
 </script>
 </body>
 </html>
