@@ -43,6 +43,10 @@
     let y = null;
     let y1 = false;
     let z = 10/ "Hello";
+    let x2 = false;
+    let y2 = new Boolean(false);
+    let x3 = new Boolean(false);
+    let y3 = new Boolean(false);
  document.getElementById("demo").innerHTML = "is 10 > 9? " + Boolean(10 > 9) + "<br>" +
  "is 10 > 9? " + (10 > 9) +"<br><hr>" +
  "100 is " + Boolean(100) + "<br>" +
@@ -55,7 +59,14 @@
 "x1 = -1 is false because it is minus(-): " + x1 +"<br>" +
 "y = null, is false because it is: " + y +"<br>" + 
 "y1 = false, is false because it is: " + y1 +"<br>" +
-"z = 10/ Hello, is false because it is: " + z +"<br>";
+"z = 10/ Hello, is false because it is: " + z +"<br>" + 
+"Typeof x2 returns boolean: " + typeof(x2) + "<br>" +
+"Typeof y2 returns object: " + typeof(y) + "<br>" +
+//When using the == operator, x2 and y2 are equal. Let's try it.
+"x2 and y2 are not equal using the (===) operator: " + (x2 === y2) + "<br>" +
+"x2 and y2 are equal using the (==) operator: " + (x2 == y2) + "<br>" +
+"x3 and y3 are not equal using the (===) operator: " + (x3 === y3) + ".<br>";
+//Note comparing two Javascript objects always return false.
 </script>
 </body>
 </html>
