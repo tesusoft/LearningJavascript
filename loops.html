@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Comparison and Logical Operators</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#a4AA6d;
+        background-color: #555;
+    }
+    hr{
+        padding: 3px 3px 3px 30px;
+        margin: 10px 0px 20px -20px;
+        background-color: #a4d;
+        border-radius: 3px;
+        position: relative;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+    <h2>JavaScript Loops</h2>
+
+<p>Display the element in array!</p>
+
+<p id="demo">Hello</p>
+
+<p>Display using a For/In statement (Object)</p>
+<p id="demo1">...</p>
+
+<p>Display using a For/In statement (Array)</p>
+<p id="demo2">...</p>
+
+<p>Display using a ForEach statement or Method</p>
+<p id="demo3">...</p>
+
+<p>Display using a For/of statement or Method</p>
+<p id="demo4">...</p>
+    
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "Toyota"];
+
+let text = "";
+let i = 0;
+// for (; i < cars.length; i++){
+//     text += cars[i] + "<br>";
+//     document.getElementById("demo").innerHTML = text;
+// }
+for (let x in cars){
+    text += cars[x] + "<br>";
+    document.getElementById("demo").innerHTML = text;
+}
+// text += cars.length;
+// document.getElementById("demo").innerHTML = text;
+//in Objects
+const person = {fname:"John", lname:"Doe", age:25, city:"Lagos", spouse:"Ada"}
+
+let attribute = "";
+
+for (let x in person) {
+    attribute += person[x]+ "<br>";
+    document.getElementById("demo1").innerHTML = attribute;
+}
+
+// In array
+
+const numbers = [45, 4, 9, 16, 25, 40, 100];
+let txt = "";
+for (let x in numbers) {
+    txt += numbers[x] + "<br>";
+    document.getElementById("demo2").innerHTML = txt;
+}
+
+let compute = "";
+numbers. forEach(myFunction);
+document.getElementById("demo3").innerHTML = compute;
+
+// function myFunction(value, index, array) {
+//     compute += value +"<br>";
+//     //compute += "Say hello" + "<br>";
+// }
+//The example below uses only one argument. Value must be the first argument before any other key
+function myFunction(value) {
+    compute += value +"<br>";
+    //compute += "Say hello" + "<br>";
+}
+// Let's loop through a string using for/of
+
+// let lang = "Javascript"
+// let lan = "";
+// for ( let x of lang) {
+//     lan += x;
+//     document.getElementById("demo4").innerHTML = lan;
+// }
+let car = "";
+for (let x of cars) {
+    car += x + "<br>";
+    document.getElementById("demo4").innerHTML = car;
+}
+</script>
+</body>
+</html>

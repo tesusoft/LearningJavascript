@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Break and Continue Statement</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: #555;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+</style>
+</head>
+<body>
+    <h2>JavaScript Break and Continue</h2>
+
+<p>A loop with a <b>break</b> statement. The code break or exit at 4.</p>
+<p id="demo">Hello</p>
+<p>A loop with a <b>continue</b> statement. The example skip the value of 7.</p>
+<p id="demo1">Hello</p>
+<p>Breaking out of a loop with a label.</p>
+<p id="demo2">Hello</p>
+<script>
+    let text = "";
+    i = 0;
+    for ( i = 0 ; i < 10 ; i++){
+        if ( i === 4){ break; }
+        text +="The number is " + i + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    let text1 = "";
+    j = 0;
+    for ( j = 0 ; j < 10 ; j++){
+        if ( j === 7){ continue; }
+        text1 +="The number is " + j + "<br>";
+    }
+    document.getElementById("demo1").innerHTML = text1;
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat"];
+let text2 = "";
+list: {
+    text2 += cars[0] + "<br>";
+    text2 += cars[1] + "<br>";
+    text2 += cars[2] + "<br>";
+    break list;
+    text2 += cars[3] + "<br>";
+}
+document.getElementById("demo2").innerHTML = text2;
+</script>
+</body>
+</html>

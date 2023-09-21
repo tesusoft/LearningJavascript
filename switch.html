@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Comparison and Logical Operators</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#a4AA6d;
+        background-color: #555;
+    }
+    hr{
+        padding: 3px 3px 3px 30px;
+        margin: 10px 0px 20px -20px;
+        background-color: #a4d;
+        border-radius: 3px;
+        position: relative;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+    <h2>JavaScript Switch Statement</h2>
+
+<p>Display The Day of the Week!</p>
+
+<p id="demo">Monday</p>
+    
+<script>
+    let day;
+    switch (new Date().getDay() + 6) {
+        default:
+        document.getElementById("demo").innerHTML = "Today is not Known/Maybe not in the Calender";
+            break;
+        case 0:
+            day = "Sunday";
+            document.getElementById("demo").innerHTML = "Today is :" + day;
+            break;
+        case 1:
+            day = "Monday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        case 2:
+            day = "Tuesday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        case 3:
+            day = "Wednesday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        case 4:
+            day = "Thursday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        case 5:
+            day = "Friday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        case 6:
+            day = "Saturday";
+            document.getElementById("demo").innerHTML = "Today is " + day;
+            break;
+        
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Do and Do While Statement</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #555;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: #555;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+</style>
+</head>
+<body>
+    <h2>JavaScript Loops - While and Do While Loops</h2>
+
+<p>Javascript While Loop</p>
+
+<p id="demo">Hello</p>
+
+<p>Javascript Do While Loop</p>
+
+<p id="demo1">Hello</p>
+<p id="demo2">Hello</p>
+<script>
+let text = "Do";
+let i = 0;
+while (i <= 10){
+ text += "<br>The number is " + i;
+i++;
+}
+document.getElementById("demo").innerHTML = text;
+
+let text1 = "Do while";
+let k = 0;
+do{
+    text1 += "<br>The number is " + k;
+    k++;
+}
+while( k < 10);
+document.getElementById("demo1").innerHTML = text1;
+
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+cars.push("Toyota", "Datsun", "Ferrari", "Audi");
+let j = 0;
+let text2 = "";
+while (cars[j]) {
+    text2 += cars[j] + "<br>";
+    j++;
+}
+document.getElementById("demo2").innerHTML = text2;
+</script>
+</body>
+</html>
