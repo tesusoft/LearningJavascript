@@ -31,16 +31,51 @@
 <h2>JavaScript Iterables with For...of Loop</h2>
 <p>Iterate over a String:</p>
 <p id="demo">Hello</p>
+<p>Iterate over a Array:</p>
+<p id="demo1">Hello</p>
+<p>Iterate over a Set:</p>
+<p id="demo2">Hello</p>
+<p>Iterate over a Map:</p>
+<p id="demo3">Hello</p>
 <script>
     //Create a String
-    const name = "W3Schools";
+    const name = "W3Schools.";
     //List all Elements
     let text = "";
     for (const x of name){
         text += x + "<br>";
+        if ( x === "x") {
+            break;
+        }
     }
-
 document.getElementById("demo").innerHTML = text;
+    //Create an Array
+    const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+    let text2 = "";
+    for (const letter of letters){
+        text2 += letter + "<br>";
+    }
+    document.getElementById("demo1").innerHTML = text2;
+    //Create a new Set
+    const alpha = new Set(["a", "b", "c", "d", "e", "f", "g", "h", "."]);
+    // List all elements
+    let alphabet = "";
+    for (const a of alpha) {
+        alphabet += a + "<br>";
+    }
+    document.getElementById("demo2").innerHTML = alphabet;
+    //Create a Map
+    const fruits = new Map([
+        ["Apples", 500],
+        ["Bananas", 300],
+        ["Oranges", 200]
+    ]);
+    //list all Entries
+    let stock = "";
+    for (const fruit of fruits) {
+        stock += fruit + "<br>";
+    }
+    document.getElementById("demo3").innerHTML = stock;
 </script>
 </body>
 </html>
