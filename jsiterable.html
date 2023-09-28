@@ -60,6 +60,9 @@ document.getElementById("demo").innerHTML = text;
     const alpha = new Set(["a", "b", "c", "d", "e", "f", "g", "h", "."]);
     // List all elements
     let alphabet = "";
+    // alpha.delete("b");
+    // alpha.delete("c");
+    // alpha.delete("a");
     for (const a of alpha) {
         alphabet += a + "<br>";
     }
@@ -70,6 +73,10 @@ document.getElementById("demo").innerHTML = text;
         ["Bananas", 300],
         ["Oranges", 200]
     ]);
+    fruits.set("Grape", 150);
+    fruits.set("Lemon", 700);
+    fruits.set("Water Lemon", 390);
+    fruits.set("Mango", 790);
     //list all Entries
     let stock = "";
     for (const fruit of fruits) {

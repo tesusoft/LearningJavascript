@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Precedence</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<h2>JavaScript Precedence</h2>
+<p>Operator precedence describes the order in which operations are performed in an arithmetic expression.</p>
+<p id="demo">Hello</p>
+<script>
+let x = 100 + 50 * 3;
+let y = (100 + 50) * 3;
+let z = 100 / 50 * 3;
+let w = 25 ** 2;
+let c = 10 % 7;
+document.getElementById("demo").innerHTML = 
+"100 + 50 * 3: " + x + "<br>" +
+"(100 + 50) * 3: " + y + "<br>" +
+"100 / 50 * 3: " + z + "<br>" +
+"25 ** 2: " + w + "<br>" +
+"10 % 7: " + c + "<br>";
+</script>
+</body>
+</html>
