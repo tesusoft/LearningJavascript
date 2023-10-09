@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript JSON</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+    #demo, button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<h2>JavaScript <i>Try & Catch</i></h2>
+<p>JSON is a format for storing and tranporting data.</p>
+<p id="demo">Hello</p>
+<script>
+  let message = document.getElementById("demo");
+try {
+  // Code that may throw an error
+  let result = 10 / 0; // This will throw a division by zero error
+  message.innerHTML = result; // This line will not be executed
+} catch (error) {
+  // Code to handle the error
+  message.innerHTML = "An error occurred:", + error.message; // Handle the error gracefully
+} finally {
+  // Code that will always run, whether there's an error or not
+  message.innerHTML = "Execution completed."; // This will be executed no matter what
+}
+
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #draggable-element {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            padding: 10px;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <div id="draggable-element" draggable="true">
+        Drag Me
+    </div>
+
+    <script>
+        const draggableElement = document.getElementById('draggable-element');
+
+        // Function to handle the drag start event
+        draggableElement.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', e.target.id);
+            e.target.style.opacity = '0.6'; // Change opacity while dragging
+        });
+
+        // Function to handle the drag end event
+        draggableElement.addEventListener('dragend', (e) => {
+            e.target.style.opacity = '1'; // Restore opacity
+        });
+
+        // Function to handle the drop event on a droppable area
+        const droppableArea = document.body; // Change this to the element where you want to drop
+        droppableArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        droppableArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const data = e.dataTransfer.getData('text/plain');
+            const draggedElement = document.getElementById(data);
+            droppableArea.appendChild(draggedElement);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript This Keyword</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+    #demo, button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<h2>JavaScript <i>This</i> Keyword.</h2>
+<p>In this example, <b>this </b> refers to the person object.</p>
+<p>Because <b>Fullname</b> is a method of the person object. Let's try it!</p>
+<p id="demo">Hello</p>
+<button id="change" onclick="changeStyle()">Click to Remove me!</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p>Using the function bind() Method.</p>
+<p id="demo3"></p>
+<p>Using the function bind() Method.</p>
+<p id="demo4"></p>
+<p>Using the function bind() Method.</p>
+<p id="demo5"></p>
+<script>
+//Create an object
+const person = {    
+    firstName: "John",
+    lastName: "Doe",
+    id: 1444,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    },
+    year: 7,
+    getMatric: function() {
+        return this.year + "/" + this.id;
+    },
+    myfunction: function() {
+        return this;
+    }
+}
+const person2 = {
+    Country: "Ukraine",
+    Age: 30,
+    firstName: "Oyetesu",
+    lastName: "Olumide"
+}
+const person3 = {
+    firstName: "Titilayo",
+    lastName: "Ajegbile",
+    id: 1890,
+    year: 8,
+    add: function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+message = document.getElementById("demo");
+message.innerHTML = person.fullName() + " - " +
+person.getMatric() + ".<br>";
+
+function changeStyle() {
+    document.getElementById("change").
+    //style.background="skyblue";
+    //style.color="white";
+    //style.color="green";
+    style.display = 'none';
+}
+//Display data from the objec:
+document.getElementById("demo1").innerHTML = person.myfunction();
+
+let xame = 
+person.fullName.call(person2);
+document.getElementById("demo2").innerHTML =  xame + ".<br>";
+
+//function bind method()
+ let y = person.fullName.bind(person3);
+//  let z = person.getMatric.bind(person3);
+document.getElementById("demo3").innerHTML = y();
+let matric = person.getMatric.call(person3);
+document.getElementById("demo4").innerHTML = matric;
+let sum = person3.add.bind(person);
+document.getElementById("demo5").innerHTML = sum();
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Modules</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+    #demo, button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<h2>JavaScript <i>Modules</i></h2>
+<p>JavaScript modules allow you to break up your code into seperate files.</p>
+<p id="demo">Hello</p>
+<p id="demo1"></p>
+<script type="module">
+    import message from "./message.js";
+    import {name, age, id} from "./person.js";
+    document.getElementById("demo").innerHTML = message();
+    let text = "My name is " + name + ", I am " + age + " Old. With ID of " + id + ".";
+    document.getElementById("demo1").innerHTML = text;
+</script>
+</body>
+</html>
+ 
