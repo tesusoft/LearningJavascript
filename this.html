@@ -70,6 +70,8 @@ const person = {
     },
     myfunction: function() {
         return this;
+        //"Hello" 
+        //this;
     }
 }
 const person2 = {
@@ -107,9 +109,9 @@ person.fullName.call(person2);
 document.getElementById("demo2").innerHTML =  xame + ".<br>";
 
 //function bind method()
- let y = person.fullName.bind(person3);
+ let y = person.fullName.apply(person2);
 //  let z = person.getMatric.bind(person3);
-document.getElementById("demo3").innerHTML = y();
+document.getElementById("demo3").innerHTML = y;
 let matric = person.getMatric.call(person3);
 document.getElementById("demo4").innerHTML = matric;
 let sum = person3.add.bind(person);

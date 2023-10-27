@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Function Bind()</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+    #demo, button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<h2>JavaScript <i>Classes</i></h2>
+<p>In JavaScript classes, you cannot use a variable without declaring it.</p>
+<p id="demo">Hello</p>
+<script>
+    // class Car {
+    //     constructor(name, year) {
+    //         this.name = name;
+    //         this.year = year;
+    //     }
+    //     age() {
+    //        const date = new Date();
+    //        return date.getFullYear() - this.year; 
+    //     }
+    // }
+    class Car {
+        constructor(brand){
+            this.carname = brand;
+        }
+        get cnam(){
+            return this.carname;
+        }
+        set cnam(x){
+            return this.carname;
+        }
+        present() {
+            return 'I have a ' + this.carname;
+        }
+    }
+    class Model extends Car {
+        constructor(brand, mod){
+            super(brand);
+            this.model = mod;
+        }
+        show(){
+            return this.present() + ', it is a ' + this.model + ".";
+        }
+    }
+    const myCar = new Model("Ford");
+
+   // const myCar1 = new Car("Audi", 2019);
+    document.getElementById("demo").innerHTML = 
+    //myCar.show();
+    myCar.cnam;
+//"My " + myCar1.name + " car is " + myCar1.age() + " years old.";
+</script>
+</body>
+</html>

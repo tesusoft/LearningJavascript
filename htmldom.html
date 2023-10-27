@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript CallBack Function()</title>
+<style>
+    h1{
+        text-align: center;
+        color: #a4d;
+    }
+    h2{
+        text-transform: capitalize;
+        color: #b60000;
+    }
+    h3{
+        text-transform: capitalize;
+        color: #a4AA6d;
+    }
+    p{
+        width: max-content;
+        padding: 10px 15px 10px 15px;
+        text-align: left;
+        color:#ffffff;
+        background-color: rgb(18, 88, 23);;
+        border-radius: 5px;
+        border-left: 10px solid #a4AA6d;
+    }
+    span {
+        color: rgb(18, 88, 23);
+        font-weight: bolder;
+        font-size: large;
+        text-decoration: underline;
+    }
+    #demo, button {
+  background-color: yellow;
+  color: black;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+  padding: 16px 32px;
+  margin: 4px 2px;
+}
+</style>
+</head>
+<body>
+<h2>JavaScript <i>HTML DOM</i></h2>
+<p>Finding HTML Elements using <b></b>document.forms</b></p>
+<form id="frm1" action="/action_page.php">
+    First name: <input type="text" name="fname" value="Olumide"><br>
+    Last name: <input type="text" name="lname" value="Oyetesu"><br>
+    Email Addr: <input type="text" name="email" value="tesukidney@gmail.com"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+  <p>These are the values of each element in the form:</p>
+  <p id="demo"></p>
+  <img id="image" src="smiley.gif" width="160" height="120">
+<script>
+  x = document.forms["frm1"];
+  let text = "";
+  for (let i = 0; i < x.length; i++){
+    text += i +": " + x.elements[i].value + "<br>";
+  }
+//document.write(text);
+  document.getElementById("demo").innerHTML = text;
+  document.getElementById("image").src = "landscape.jpg";
+  document.getElementById("image").width = 240;
+  //document.getElementById("image").height =90;
+  document.title = "JavaScript Dom Element";
+</script>
+</body>
+</html

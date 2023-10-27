@@ -40,9 +40,15 @@
 <p id="demo">Hello</p>
 <p>Set.values() returns a Set Iterator</p>
 <p id="demo1"></p>
+<p>Set.size returns a Size of a set</p>
+<p id="demo2"></p>
+<p>Set.keys() returns a set Iterator:</p>
+<p id="demo3"></p>
+<p>Set.entries() returns a set Iterator:</p>
+<p id="demo4"></p>
 <script>
-const letters = new Set();
-// const letters = new Set(["a", "b", "c", "d", "e"]);
+//const letters = new Set();
+const letters = new Set(["a", "b", "c", "d", "e"]);
 letters.add("a");
 letters.add("b");
 letters.add("c");
@@ -62,21 +68,32 @@ letters.add("n");
 //letters.delete("c");
 
 //List all Elements
+//forEach() method invokes a function for a set elemet
 let set = "";
 letters.forEach (function(value) {
 set += value + ".<br>";
 });
-
 // for(letter of letters){
 //  set += letter + "<br>";
 // }
 document.getElementById("demo").innerHTML = set + " a Set with size of " + "<span>"+ letters.size + "</span>." ;
-
+//set.values()
 let letter = "";
 for (const x of letters.values()){
     letter += x + ".<br>";
 }
 document.getElementById("demo1").innerHTML = letter;
+//\Display set.size
+document.getElementById("demo2").innerHTML = letters.size;
+//set.keys()
+document.getElementById("demo3").innerHTML = letters.keys();
+//set.entries()
+//const iterator = letters.entries();
+let entry = "";
+for (const x of letters.entries()){
+entry += x + "<br>";
+}
+document.getElementById("demo4").innerHTML = entry;
 </script>
 </body>
 </html>

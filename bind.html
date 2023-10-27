@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>JavaScript Prototype</title>
+    <title>JavaScript Function Bind()</title>
 <style>
     h1{
         text-align: center;
@@ -42,33 +42,22 @@
 </style>
 </head>
 <body>
-<h2>JavaScript <i>Object</i> Prototype</h2>
+<h2>JavaScript <i>Function</i> Call.</h2>
+<p>With function call() method, you can write <br>a method that can be used on a different objects.</p>
 <p id="demo">Hello</p>
 <script>
-    function Person(first, last, age, eye) {
-        this.firstName = first;
-        this.lastName = last;
-        this.age = age;
-        this.eyeColor = eye;
+    const person = {
+        firstName:"John",
+        lastName:"Doe",
+        display: function() {
+            let x = document.getElementById("demo").innerHTML = 
+            this.firstName + " " + this.lastName;
+        }
     }
-
-    Person.prototype.name = 
-    function() {
-        return this.firstName + " " + this.lastName
-    };
-    
-    Person.prototype.changeName = 
-    function (name){
-        return this.lastName = name;
-    }
-    const myFather = new 
-    Person("John", "Doe", 50, "Blue");
-    myFather.changeName("Adekunle");
-    document.getElementById("demo").innerHTML = 
-    "My Father's name is " + 
-    myFather.lastName + ".<br>" +
-    myFather.name() + ".";
+    //person.display();
+    //Let's do a set timeout
+    let display = person.display.bind(person);
+    setTimeout(display, 3000);
 </script>
 </body>
 </html>
- 
